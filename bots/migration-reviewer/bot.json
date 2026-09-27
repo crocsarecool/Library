@@ -1,0 +1,20 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "migration-reviewer",
+  "name": "Migration Reviewer",
+  "description": "Reviews schema migrations for locks, data loss and rollback gaps.",
+  "category": "Code review",
+  "about": "Point it at any git repo that keeps database migrations in files. It finds the migrations your branch adds or changes, reads each one against the code that uses those tables, and flags locking, destructive and rollback problems with a safer rewrite for each. It never runs a migration and never touches a database.",
+  "features": [
+    "Flag migrations that lock a table under load",
+    "Catch drops, renames and broken rollbacks",
+    "Suggest safer rewrites and a deploy order"
+  ],
+  "examplePrompt": "Review the migrations on my branch against main and tell me whether they are safe to deploy.",
+  "author": { "github": "crocsarecool", "name": "crocsarecool" },
+  "mascot": { "body": "moon", "color": "brand-leaf", "activity": "reading" },
+  "emoji": "🗄️",
+  "agent": "claude-code",
+  "permissionMode": "plan",
+  "allowedTools": ["Read", "Grep", "Glob", "Bash"]
+}
