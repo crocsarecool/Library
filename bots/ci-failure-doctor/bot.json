@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "ci-failure-doctor",
+  "name": "CI Failure Doctor",
+  "description": "Finds the real cause of a failed CI run and proposes the smallest fix.",
+  "category": "Developer workflow",
+  "about": "Paste a failing CI log or point it at a run. It separates the first real failure from the cascade of errors after it, says what kind of failure it is, traces it to the file behind it, and proposes the smallest fix. It never pushes, reruns CI or touches secrets.",
+  "features": [
+    "Separate the first real failure from cascade noise",
+    "Classify it: bug, flake, dependency, env or config",
+    "Trace it to the file and propose the smallest fix"
+  ],
+  "examplePrompt": "The CI run on my branch failed. Work out what actually broke and what the smallest fix is.",
+  "author": { "github": "crocsarecool", "name": "Raunaq Vaisoha" },
+  "mascot": { "body": "fire", "color": "brand-ember", "activity": "thinking" },
+  "emoji": "🩺",
+  "agent": "claude-code",
+  "permissionMode": "ask-permissions"
+}
