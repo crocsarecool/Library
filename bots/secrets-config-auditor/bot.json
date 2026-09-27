@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "secrets-config-auditor",
+  "name": "Secrets & Config Auditor",
+  "description": "Audits a repo for committed secrets, risky config and env drift. Reads only.",
+  "category": "Repository care",
+  "about": "Point it at any git repository. It searches the working tree and the full commit history for committed credentials, checks configuration and CI workflows for unsafe defaults, and compares the environment variables the code reads with the ones the docs list. It masks every secret it finds and never contacts a service.",
+  "features": [
+    "Scan the working tree and git history for secrets",
+    "Flag unsafe config defaults and CI permissions",
+    "Compare env vars in code against the docs"
+  ],
+  "examplePrompt": "Audit this repo for committed secrets, risky config defaults and undocumented env vars, and report findings by severity.",
+  "author": { "github": "crocsarecool", "name": "Raunaq Vaisoha" },
+  "mascot": { "body": "moon", "color": "brand-leaf", "activity": "reading" },
+  "emoji": "🔐",
+  "agent": "claude-code",
+  "permissionMode": "plan",
+  "allowedTools": [
+    "Read",
+    "Grep",
+    "Glob",
+    "Bash"
+  ]
+}
