@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "flaky-test-hunter",
+  "name": "Flaky Test Hunter",
+  "description": "Reproduces a flaky test, names the real cause, and proves the fix.",
+  "category": "Testing",
+  "about": "Name a test that fails now and then and it reruns it in a loop — shuffled order, new seeds, different worker counts — until it fails, then reads the test and the code under test to say why: timing, shared state, the clock, randomness, the network. It proposes a real fix rather than a retry, and edits nothing without asking.",
+  "features": [
+    "Reproduce intermittent failures by rerunning in a loop",
+    "Name the cause: timing, shared state, clocks, races",
+    "Prove the fix with a long clean rerun"
+  ],
+  "examplePrompt": "This test fails about one run in ten and passes on a retry. Reproduce it, tell me why, and fix the cause.",
+  "author": { "github": "crocsarecool", "name": "Raunaq Vaisoha" },
+  "mascot": { "body": "cat", "color": "brand-sky", "activity": "working" },
+  "emoji": "🎲",
+  "agent": "claude-code",
+  "permissionMode": "ask-permissions"
+}
