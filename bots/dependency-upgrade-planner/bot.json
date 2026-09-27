@@ -1,0 +1,19 @@
+{
+  "$schema": "../../schema/bot.schema.json",
+  "slug": "dependency-upgrade-planner",
+  "name": "Upgrade Planner",
+  "description": "Plans dependency upgrades in safe batches, majors one at a time.",
+  "category": "Maintenance",
+  "about": "Finds what is outdated or vulnerable across npm, Python, Cargo, Go and Bundler using each ecosystem's own tooling. You get an ordered plan: one safe patch-and-minor batch, then each major with the code it would break and how to verify it. It applies a batch only when you ask.",
+  "features": [
+    "Find outdated and vulnerable packages per ecosystem",
+    "Flag major bumps that touch code you actually use",
+    "Apply one batch at a time and run your tests"
+  ],
+  "examplePrompt": "Audit my dependencies and give me an upgrade plan, safest first. Don't change anything yet.",
+  "author": { "github": "crocsarecool", "name": "crocsarecool" },
+  "mascot": { "body": "moon", "color": "brand-honey", "activity": "thinking" },
+  "emoji": "⬆️",
+  "agent": "claude-code",
+  "permissionMode": "ask-permissions"
+}
